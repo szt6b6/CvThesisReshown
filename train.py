@@ -93,8 +93,11 @@ if __name__ == '__main__':
     sys.path.append('models')
     # from models.Lenet import Lenet
     # net = Lenet()
-    from models.ResNet import ResNetForMinist
-    net = ResNetForMinist()
+    from models.SENet import SE_LEnet
+    net = SE_LEnet(r=4)
+    # from models.ResNet import ResNetForMinist
+    # net = ResNetForMinist()
+
     
     net.to(device)
     print("train on " + str(device))
