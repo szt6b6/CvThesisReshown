@@ -93,11 +93,13 @@ if __name__ == '__main__':
     sys.path.append('models')
     # from models.Lenet import Lenet
     # net = Lenet()
-    from models.SENet import SE_LEnet
-    net = SE_LEnet(r=4)
+    # from models.SENet import SE_LEnet
+    # net = SE_LEnet(r=4)
     # from models.ResNet import ResNetForMinist
     # net = ResNetForMinist()
 
+    from models.Vit_transformer import Vit_Transformer
+    net = Vit_Transformer(1, 32, 64, 32, 4)
     
     net.to(device)
     print("train on " + str(device))
